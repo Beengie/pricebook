@@ -1,0 +1,21 @@
+<div class="menu">
+  <ul>
+    <li><%= link_to_unless_current "Home", page_home_path %></li>
+    <li><a href="#">About</a>
+      <ul>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="">Vision</a></li>
+      </ul>
+    </li>
+    <li><%= link_to_unless_current "Products", page_products_path %>
+      <ul>
+        <li><a href="#">Maps</a></li>
+        <li><a href="#">Books</a></li>
+      </ul>
+    </li>
+    <li><%= link_to_unless_current "Calendar", page_calendar_path %></li>
+    <li><%= link_to_unless_current "Support", page_support_path %></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</div>
