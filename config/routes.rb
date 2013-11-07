@@ -4,7 +4,7 @@ Pricebook::Application.routes.draw do
   get "page/login"
   get "page/products"
   get "page/calendar"
-  get "welcome/index"
+  get "welcome/index(/:year(/:month))" => "welcome#index", :as => "welcome_index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +55,7 @@ Pricebook::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'page#home'
 
   # See how all your routes lay out with "rake routes"
 

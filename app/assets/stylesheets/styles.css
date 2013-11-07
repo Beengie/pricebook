@@ -317,5 +317,22 @@ padding: 18px 0;
 overflow: hidden;
 }
 
+table {
+  border-collapse: collapse;
+}
+th, td {
+  width: 80%;
+  height: 65px;
+  border: 1px solid black;
+  text-align: center;
+}
 
-
+#cal {
+border:2px solid;
+border-radius:25px;
+box-shadow: 10px 10px 5px #888888;
+transition: box-shadow 1s;
+}
+#cal:hover {
+box-shadow: 10px 10px 5px #111111;
+}
