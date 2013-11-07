@@ -3,8 +3,8 @@ Pricebook::Application.routes.draw do
   get "page/home"
   get "page/login"
   get "page/products"
-  get "page/calendar"
-  get "welcome/index(/:year(/:month))" => "welcome#index", :as => "welcome_index"
+  get "page/calendar(/:year(/:month))" => "page#calendar", :as => "page_calendar"
+  get "welcome/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

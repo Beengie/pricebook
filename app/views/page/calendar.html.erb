@@ -1,2 +1,9 @@
-<h1>Page#calendar</h1>
-<p>Find me in app/views/page/calendar.html.erb</p>
+<% content_for :title do %>
+Calendar
+<% end %>
+<!-- <h1>Page#calendar</h1>
+<p><%= page_home_path %></p>
+<p><%= page_home_url %></p>
+<p>Find me in app/views/page/calendar.html.erb</p> -->
+<%= my_calendar(@month, @year) %>
+
