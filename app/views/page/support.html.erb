@@ -1,5 +1,33 @@
 <% content_for :title do %>
 Support
 <% end %>
-<h1>Page#support</h1>
-<p>Find me in app/views/page/support.html.erb</p>
+<h1>Contact support</h1>
+
+<%= form_tag do %>
+  <%= field_set_tag 'Your details' do %>
+    <%= label_tag "Name", "Name: ", :class => 'input11' %> <%= text_field_tag 'Name', @name %><br/>
+    <%= label_tag "Email", "Email: " %> <%= email_field_tag 'Email', @email %><br/>
+    <%= label_tag "Phone", "Phone:" %> <%= telephone_field_tag 'Phone', @phone %><br/>
+    <%= select_tag options_for_select(@prod_array), "id", "name" %>
+    <%= submit_tag 'Submit' %><br/>
+  <% end %>
+<% end %>
+
+<% if params[:commit] != nil %>
+<p><%= "#{@name}, your email is: #{ @email}" %></p>
+<% end %>
+
+<% if params[:commit] != nil %>
+  <%= show_params %>
+<% end %>
+
+<%= @prod_array.inspect %>
+
+<ul>
+  <li>question area</li>
+  <li>perferred contact type (radio)</li>
+    &nbsp;&nbsp;email<br/>
+    &nbsp;&nbsp;phone
+  <li>pulldown menu of what they are inquiring about</li>
+  <li>checkboxes for something (at least 2)</li>
+</li>

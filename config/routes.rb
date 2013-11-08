@@ -1,5 +1,6 @@
 Pricebook::Application.routes.draw do
   get "page/support"
+  post "page/support"
   get "page/home"
   get "page/login"
   get "page/products"
