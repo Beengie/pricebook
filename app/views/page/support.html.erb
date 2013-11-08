@@ -8,7 +8,7 @@ Support
     <%= label_tag "Name", "Name: ", :class => 'input11' %> <%= text_field_tag 'Name', @name %><br/>
     <%= label_tag "Email", "Email: " %> <%= email_field_tag 'Email', @email %><br/>
     <%= label_tag "Phone", "Phone:" %> <%= telephone_field_tag 'Phone', @phone %><br/>
-    <%= select_tag options_for_select(@prod_array), "id", "name" %>
+    <%= select_tag 'Product', options_for_select(@prod_array.map{|k, v| [v, k]}) %>
     <%= submit_tag 'Submit' %><br/>
   <% end %>
 <% end %>

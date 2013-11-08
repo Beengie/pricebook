@@ -21,7 +21,6 @@ class PageController < ApplicationController
   end
 
   def setup
-    # @prod_array = [["1", "Skiis"], ["2", "boots"], ["3", "poles"], ["4", "mittens"], ["5", "mask"], ["6", "hat"], ["7", "gloves"]]
     @prod_array = {"1" => "Skiis", "2" => "boots", "3" => "poles", "4" => "mittens", "5" => "mask", "6" => "hat", "7" => "gloves"}
   end
 end
